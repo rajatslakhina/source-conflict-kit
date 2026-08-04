@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="770" viewBox="0 0 1000 770" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect width="1000" height="770" fill="#0d1117"/>
+  <rect x="0" y="0" width="1000" height="34" fill="#161b22"/>
+  <circle cx="22" cy="17" r="6" fill="#f85149"/>
+  <circle cx="42" cy="17" r="6" fill="#d29922"/>
+  <circle cx="62" cy="17" r="6" fill="#3fb950"/>
+  <text x="86" y="22" fill="#7d8590" font-size="12">swift run SourceConflictDemo &#8212; real captured output</text>
+
+  <text x="24" y="62" fill="#58a6ff" font-size="12.5">[3] One document chunked three times</text>
+  <text x="24" y="80" fill="#7d8590" font-size="12.5">&#160;&#160;&#160;&#160;&#160;Corroboration counts documents, not rows: 1 source against 1, not 3 against 1.</text>
+  <text x="24" y="98" fill="#8b949e" font-size="12.5">&#160;&#160;&#160;&#160;&#160;topic: request-timeout</text>
+  <text x="24" y="116" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;conflict: p-blog-1 vs p-spec &#8212; numeric: 30s vs 60s</text>
+  <text x="24" y="134" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;conflict: p-blog-2 vs p-spec &#8212; numeric: 30s vs 60s</text>
+  <text x="24" y="152" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;conflict: p-blog-3 vs p-spec &#8212; numeric: 30s vs 60s</text>
+  <text x="24" y="170" fill="#3fb950" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;position [p-blog-1, p-blog-2, p-blog-3] sources=1 authority=community revision=&#8212;</text>
+  <text x="24" y="188" fill="#3fb950" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;position [p-spec] sources=1 authority=official revision=&#8212;</text>
+  <text x="24" y="206" fill="#e6edf3" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;resolution: RESOLVED by authority &#8594; [p-spec]</text>
+  <text x="24" y="224" fill="#d29922" font-size="12.5">&#160;&#160;&#160;&#160;&#160;decision: FLAGGED (3 withheld)</text>
+
+  <text x="24" y="260" fill="#58a6ff" font-size="12.5">[6] Nothing can break the tie</text>
+  <text x="24" y="278" fill="#7d8590" font-size="12.5">&#160;&#160;&#160;&#160;&#160;Every rule declines. The audit blocks rather than picking.</text>
+  <text x="24" y="296" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;conflict: p-x vs p-y &#8212; exclusive: disabled vs enabled</text>
+  <text x="24" y="314" fill="#e6edf3" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;resolution: UNRESOLVED &#8212; every rule declined (authority, recency, corroboration)</text>
+  <text x="24" y="332" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;decision: BLOCKED &#8212; do not generate on [caching-prompt]</text>
+
+  <text x="24" y="368" fill="#58a6ff" font-size="12.5">[8] A negation a similarity score would miss</text>
+  <text x="24" y="386" fill="#7d8590" font-size="12.5">&#160;&#160;&#160;&#160;&#160;Every content word matches. The one token that reverses the sentence does not.</text>
+  <text x="24" y="404" fill="#f85149" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;conflict: p-off vs p-on &#8212; polarity: one side is negated over 5 shared terms</text>
+  <text x="24" y="422" fill="#e6edf3" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;resolution: RESOLVED by recency &#8594; [p-off]</text>
+
+  <text x="24" y="458" fill="#58a6ff" font-size="12.5">[11] One dispute, two ladders</text>
+  <text x="24" y="476" fill="#7d8590" font-size="12.5">&#160;&#160;&#160;&#160;&#160;The order of the rules is the policy, and it changes the answer.</text>
+  <text x="24" y="494" fill="#e6edf3" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;ladder [authority]:&#160;&#160;&#160;&#160;&#160;&#160;RESOLVED by authority &#8594; [p-spec]</text>
+  <text x="24" y="512" fill="#e6edf3" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;ladder [corroboration]: RESOLVED by corroboration &#8594; [p-a, p-b]</text>
+
+  <text x="24" y="548" fill="#58a6ff" font-size="12.5">[12] What the auditor refuses</text>
+  <text x="24" y="566" fill="#d29922" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;empty retrieved set: no passages to audit</text>
+  <text x="24" y="584" fill="#d29922" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;two passages sharing an id: passage id 'p-1' appears more than once</text>
+  <text x="24" y="602" fill="#d29922" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;a topic that normalizes to nothing: topic 'the of and' normalizes to nothing</text>
+  <text x="24" y="620" fill="#d29922" font-size="12.5">&#160;&#160;&#160;&#160;&#160;&#160;&#160;a repeated ladder rule: resolution rule 'authority' appears more than once</text>
+
+  <text x="24" y="656" fill="#e6edf3" font-size="12.5">Statistics across the ten scenarios above</text>
+  <text x="24" y="674" fill="#8b949e" font-size="12.5">&#160;&#160;&#160;&#160;&#160;audits: 10&#160;&#160;&#160;passages seen: 24</text>
+  <text x="24" y="692" fill="#8b949e" font-size="12.5">&#160;&#160;&#160;&#160;&#160;conflicts found: 8&#160;&#160;&#160;resolved: 6&#160;&#160;&#160;unresolved: 2</text>
+  <text x="24" y="710" fill="#8b949e" font-size="12.5">&#160;&#160;&#160;&#160;&#160;passages withheld: 9&#160;&#160;&#160;trail entries: 36</text>
+
+  <rect x="24" y="726" width="952" height="30" rx="6" fill="#161b22" stroke="#238636"/>
+  <text x="38" y="746" fill="#3fb950" font-size="12">build: 0 warnings&#160;&#160;&#183;&#160;&#160;tests: 64 passed, 0 failed&#160;&#160;&#183;&#160;&#160;coverage: 100.00% &#8212; 248 regions / 107 functions / 489 lines&#160;&#160;&#183;&#160;&#160;swiftlint --strict: 0 violations, 18 files</text>
+</svg>

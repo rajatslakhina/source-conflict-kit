@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="620" viewBox="0 0 960 620" font-family="ui-monospace, SFMono-Regular, Menlo, monospace">
+  <rect width="960" height="620" fill="#0d1117"/>
+  <text x="32" y="44" fill="#e6edf3" font-size="20" font-weight="600">SourceConflictKit &#8212; conflict audit, before the model call</text>
+  <text x="32" y="70" fill="#7d8590" font-size="13">Deterministic &#183; actor-based &#183; zero dependencies &#183; no model, no network, no clock</text>
+
+  <rect x="32" y="96" width="896" height="58" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="122" fill="#58a6ff" font-size="14" font-weight="600">Retrieved passages</text>
+  <text x="52" y="142" fill="#7d8590" font-size="12">id &#183; text &#183; TopicKey &#183; Provenance(sourceID, authority, revision)</text>
+
+  <text x="476" y="176" fill="#484f58" font-size="16">&#8595;</text>
+
+  <rect x="32" y="186" width="896" height="62" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="212" fill="#e6edf3" font-size="14" font-weight="600">TopicKey bucketing</text>
+  <text x="52" y="232" fill="#7d8590" font-size="12">lowercase &#183; strip stop words &#183; sort tokens &#8212; so &#8220;Request Timeout&#8221; and &#8220;the timeout of a request&#8221; meet</text>
+
+  <text x="476" y="270" fill="#484f58" font-size="16">&#8595;</text>
+
+  <rect x="32" y="280" width="896" height="80" rx="8" fill="#161b22" stroke="#1f6feb" stroke-width="2"/>
+  <text x="52" y="306" fill="#58a6ff" font-size="14" font-weight="600">ContradictionOracle &#8212; the seam</text>
+  <text x="52" y="326" fill="#7d8590" font-size="12">judge(lhs, rhs) &#8594; conflicts(reason) | agrees(reason) | unrelated&#160;&#160;&#160;&#160;must be symmetric</text>
+  <text x="52" y="346" fill="#7d8590" font-size="12">built-in: measurement &#183; polarity &#183; exclusive value&#160;&#160;&#160;&#160;swap for NLI, a rule engine, a schema</text>
+
+  <text x="476" y="382" fill="#484f58" font-size="16">&#8595;</text>
+
+  <rect x="32" y="392" width="440" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="418" fill="#e6edf3" font-size="14" font-weight="600">ConflictGrouper</text>
+  <text x="52" y="438" fill="#7d8590" font-size="12">camps from agreement edges</text>
+  <text x="52" y="456" fill="#7d8590" font-size="12">a merge that unites two conflicting</text>
+  <text x="52" y="474" fill="#7d8590" font-size="12">passages is refused</text>
+
+  <rect x="488" y="392" width="440" height="96" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="508" y="418" fill="#e6edf3" font-size="14" font-weight="600">Position</text>
+  <text x="508" y="438" fill="#7d8590" font-size="12">maxAuthority &#183; maxRevision</text>
+  <text x="508" y="456" fill="#3fb950" font-size="12">corroboration = distinct sourceIDs</text>
+  <text x="508" y="474" fill="#7d8590" font-size="12">three chunks of one doc are one voice</text>
+
+  <text x="476" y="510" fill="#484f58" font-size="16">&#8595;</text>
+
+  <rect x="32" y="520" width="440" height="76" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="52" y="546" fill="#e6edf3" font-size="14" font-weight="600">ResolutionLadder</text>
+  <text x="52" y="566" fill="#7d8590" font-size="12">authority &#8594; recency &#8594; corroboration</text>
+  <text x="52" y="584" fill="#7d8590" font-size="12">strict winner alone, or stand aside</text>
+
+  <rect x="488" y="520" width="440" height="76" rx="8" fill="#161b22" stroke="#30363d"/>
+  <text x="508" y="546" fill="#e6edf3" font-size="14" font-weight="600">AuditDecision</text>
+  <text x="508" y="566" fill="#3fb950" font-size="12">clear</text>
+  <text x="560" y="566" fill="#d29922" font-size="12">flagged(withheld:)</text>
+  <text x="508" y="584" fill="#f85149" font-size="12">blocked(topics:) &#8212; do not generate</text>
+</svg>
