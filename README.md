@@ -154,6 +154,13 @@ public protocol ContradictionOracle: Sendable {
 }
 ```
 
+**`judge` is synchronous, and that is a real constraint, not an oversight.** It is what makes an
+audit a pure function of its inputs — no network, no model call, replayable to the same report on
+any machine. An oracle that *is* async (an NLI model, a remote classifier) does not fit through
+this seam directly: batch-judge the pairs first and feed the results in through a table-backed
+oracle. That costs you a round trip you were going to spend anyway, and buys back a deterministic
+grouping and resolution stage. If you need the model call inline, this is the wrong package.
+
 `LexicalContradictionOracle` ships as a working default so the package is useful with no
 dependencies — **not** as the recommended one. It reasons over three signals:
 
